@@ -1,0 +1,23 @@
+{
+  "expo": {
+    "name": "PULSE Reaction",
+    "slug": "pulse-reaction",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "dark",
+    "splash": {
+      "backgroundColor": "#0a0a14"
+    },
+    "android": {
+      "package": "com.jakesadavidson.pulsereaction",
+      "versionCode": 1,
+      "adaptiveIcon": {
+        "backgroundColor": "#0a0a14"
+      },
+      "permissions": []
+    },
+    "sdkVersion": "51.0.0",
+    "platforms": ["android"]
+  }
+}
