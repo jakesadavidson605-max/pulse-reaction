@@ -7,12 +7,14 @@
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "dark",
     "splash": {
+      "image": "./assets/splash.png",
       "backgroundColor": "#0a0a14"
     },
     "android": {
       "package": "com.jakesadavidson.pulsereaction",
       "versionCode": 1,
       "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#0a0a14"
       },
       "permissions": []
@@ -27,7 +29,6 @@
         "projectId": "a633eca7-3f3c-4f0b-8c2c-e6c0c03614cc"
       }
     },
-    "androidCompileSdkVersion": 34,
-    "runtimeVersion": "{{expoConfig.sdkVersion}}"
+    "androidCompileSdkVersion": 34
   }
 }
