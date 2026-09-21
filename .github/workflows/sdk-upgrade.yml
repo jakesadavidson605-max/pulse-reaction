@@ -1,12 +1,18 @@
 name: SDK Upgrade
 
 
+
+
 on:
   workflow_dispatch:
 
 
+
+
 permissions:
   contents: write
+
+
 
 
 jobs:
@@ -24,7 +30,8 @@ jobs:
       - name: Upgrade Expo to SDK 54
         run: |
           npm install --legacy-peer-deps
-          npx -y expo@~54.0.0 install --fix
+          npx -y expo@~54.0.0 install react react-native expo-status-bar react-native-webview expo-build-properties
+          npm install --legacy-peer-deps
       - name: Commit upgraded package files
         run: |
           git config user.name "github-actions[bot]"
