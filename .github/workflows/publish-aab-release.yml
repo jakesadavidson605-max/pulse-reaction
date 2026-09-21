@@ -1,0 +1,21 @@
+name: Publish AAB release
+on: workflow_dispatch
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      actions: read
+    steps:
+      - uses: dawidd6/action-download-artifact@v6
+        with:
+          workflow: eas-build.yml
+          workflow_conclusion: success
+          name: android-aab
+          path: ./aab
+      - run: ls -lh ./aab && (unzip -o ./aab/*.zip -d ./aab 2>/dev/null || true) && ls -lh ./aab
+      - uses: softprops/action-gh-release@v2
+        with:
+          tag_name: aab-release-1
+          name: AAB release 1
+          files: ./aab/*.aab
