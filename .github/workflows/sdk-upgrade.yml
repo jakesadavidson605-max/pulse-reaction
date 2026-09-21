@@ -20,8 +20,7 @@ jobs:
           node-version: 20
       - name: Upgrade Expo to SDK 54
         run: |
-          npx expo install expo@^54.0.0
-          npx expo install --fix
+          npx -y expo@~54.0.0 install --fix
       - name: Commit upgraded package files
         run: |
           git config user.name "github-actions[bot]"
