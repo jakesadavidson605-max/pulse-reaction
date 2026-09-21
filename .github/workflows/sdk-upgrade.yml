@@ -1,10 +1,13 @@
 name: SDK Upgrade
 
+
 on:
   workflow_dispatch:
 
+
 permissions:
   contents: write
+
 
 jobs:
   upgrade:
@@ -20,6 +23,7 @@ jobs:
           node-version: 20
       - name: Upgrade Expo to SDK 54
         run: |
+          npm install --legacy-peer-deps
           npx -y expo@~54.0.0 install --fix
       - name: Commit upgraded package files
         run: |
